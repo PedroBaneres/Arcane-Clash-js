@@ -1,0 +1,111 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* App Container */
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Game Container */
+  .game {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  /* Turn Indicator */
+  .turn-indicator {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Player Area */
+  .player-area {
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .player-area h2 {
+    margin-top: 0;
+  }
+  
+  /* Deck and Discard Pile */
+  .deck,
+  .discard-pile {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+  }
+  
+  .deck button {
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
+  
+  /* Hand of Cards */
+  .hand {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: #e9e9e9;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+  }
+  
+  .card p {
+    margin: 5px 0;
+  }
+  
+  .card button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  /* Trade Row */
+  .trade-row {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .trade-row h2 {
+    margin-top: 0;
+  }
+  
+  .trade-row button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
