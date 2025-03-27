@@ -8,9 +8,18 @@ const initializeGame = () => {
     health: 50,
     tradePoints: 0,
     deck: [
-      { id: 1, name: "Scout", cost: 2, attack: 1, trade: 1 },
-      { id: 2, name: "Viper", cost: 3, attack: 2, defense: 1 },
+        { id: 1, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 2, name: "Viper", cost: 0, attack: 1},
+        { id: 3, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 4, name: "Viper", cost: 0, attack: 1},
+        { id: 5, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 6, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 7, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 8, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 9, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 10, name: "Scout", cost: 0, attack: 0, trade: 1 },
     ],
+    
     hand: [],
     discardPile: [],
   };
@@ -20,8 +29,16 @@ const initializeGame = () => {
     health: 50,
     tradePoints: 0,
     deck: [
-      { id: 3, name: "Scout", cost: 2, attack: 1, trade: 1 },
-      { id: 4, name: "Viper", cost: 3, attack: 2, defense: 1 },
+        { id: 1, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 2, name: "Viper", cost: 0, attack: 1},
+        { id: 3, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 4, name: "Viper", cost: 0, attack: 1},
+        { id: 5, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 6, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 7, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 8, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 9, name: "Scout", cost: 0, attack: 0, trade: 1 },
+        { id: 10, name: "Scout", cost: 0, attack: 0, trade: 1 },
     ],
     hand: [],
     discardPile: [],
@@ -29,13 +46,13 @@ const initializeGame = () => {
 
   // Initial Trade Row with sample cards
   const tradeRow = [
-    { id: 5, name: "Blob Fighter", cost: 4, attack: 3, trade: 2 },
-    { id: 6, name: "Battle Station", cost: 5, defense: 3, trade: 2 },
+    { id: 15, name: "Blob Fighter", cost: 4, attack: 3, trade: 2 },
+    { id: 16, name: "Battle Station", cost: 5, attack: 0, trade: 4 },
+    { id: 18, name: "Bgoo", cost: 9, attack: 10, trade: 2 },
+    { id: 17, name: "Battle Stationsada", cost: 2, attack: 0, trade: 2 },
   ];
 
-  // Deal an initial card to each player from their deck
-  if (player1.deck.length) player1.hand.push(player1.deck.shift());
-  if (player2.deck.length) player2.hand.push(player2.deck.shift());
+  
 
   return {
     players: [player1, player2],
@@ -79,6 +96,8 @@ const buyCard = (state, card) => {
 const endTurn = (state) => {
   const newState = deepClone(state);
   newState.currentPlayer = (newState.currentPlayer + 1) % newState.players.length;
+  newState.currentPlayer.deck = newState.currentPlayer.discardPile;
+  newState.currentPlayer.drawCard;
   return newState;
 };
 
